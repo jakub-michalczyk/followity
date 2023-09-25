@@ -1,0 +1,15 @@
+<div class="pa-4 flex w-full b-b b-col-lighterdark _celebrity-container swiper-container">
+    <div class="swiper-wrapper">
+        <div class="center swiper-slide"
+             *ngFor="let celebrity of celebrities">
+            <div class="outline center b-radius-max pos-relative _celebrity-wrap"
+                 [ngClass]="{'half-opacity': celebrity.viewed}">
+                <img class="b-radius-max"
+                     [src]="celebrity.data.image">
+            </div>
+            <div class="pt-1 pb-1 pl-2 pr-2 mt-2 fs-small col-white">
+                {{ celebrity.data.name }}
+            </div>
+        </div>
+    </div>
+</div>

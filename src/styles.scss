@@ -1,0 +1,36 @@
+@use "/src/global/variables.scss";
+@use "/src/global/functions.scss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+* {
+  font-family: Roboto, sans-serif;
+}
+
+body,
+html {
+  @extend .w-full, .h-full, .ma-0;
+  background-color: map-get(variables.$colors, dark);
+}
+
+.b-radius-max {
+  border-radius: 100%;
+}
+
+.outline {
+  outline-offset: 2px;
+  outline: solid 2px map-get(variables.$colors, red);
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  text-align: center;
+}
+
+.half-opacity {
+  opacity: 0.5;
+}

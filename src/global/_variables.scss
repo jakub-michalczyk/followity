@@ -1,0 +1,32 @@
+$colors: (
+  dark: #0d0d0d,
+  lighterdark: #181717,
+  red: #f04a4a,
+  white: #fff,
+);
+
+$fontSizes: (
+  small: 0.8rem,
+  medium: 1.2rem,
+  big: 2rem,
+);
+
+$margins: (
+  tiny: 0.5rem,
+);
+
+$sizes: (
+  full: 100%,
+  half: 50%,
+  quater: 25%,
+);
+
+$directions: (
+  t: "top",
+  r: "right",
+  b: "bottom",
+  l: "left",
+);
+
+$positions: (absolute, relative, fixed, static);
+$overflows: (hidden, auto, scroll);

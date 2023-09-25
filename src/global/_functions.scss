@@ -1,0 +1,85 @@
+@use "/src/global/variables.scss";
+
+@mixin generate($prefix, $property) {
+  $sizes: 0, 0.1, 0.25, 0.5, 1, 1.5, 3;
+  $spacing: 1rem;
+
+  @for $i from 1 through length($sizes) {
+    // Get the size for the current index
+    $size: nth($sizes, $i);
+
+    // Create the rule
+    .#{$prefix}-#{$i - 1} {
+      #{$property}: $spacing * $size;
+    }
+  }
+}
+
+$rules: (
+  ml: margin-left,
+  mt: margin-top,
+  mb: margin-bottom,
+  mr: margin-right,
+  pl: padding-left,
+  pt: padding-top,
+  pb: padding-bottom,
+  pr: padding-right,
+  ma: margin,
+  pa: padding,
+);
+
+//Margins & paddings
+@each $item in $rules {
+  @include generate(nth($item, 1), nth($item, 2));
+}
+
+//Colors
+@each $name, $color in variables.$colors {
+  .bg-col-#{$name} {
+    background: $color;
+  }
+  .col-#{$name} {
+    color: $color;
+  }
+  .b-col-#{$name} {
+    border-color: $color !important;
+  }
+}
+
+//Font sizes
+@each $name, $fontSize in variables.$fontSizes {
+  .fs-#{$name} {
+    font-size: $fontSize;
+  }
+}
+
+//Positions
+@each $position in variables.$positions {
+  .pos-#{$position} {
+    position: $position;
+  }
+}
+
+//Overflows
+@each $overflow in variables.$overflows {
+  .overflow-#{$overflow} {
+    overflow: $overflow;
+  }
+}
+
+//Width
+@each $name, $size in variables.$sizes {
+  .w-#{$name} {
+    width: $size;
+  }
+  .h-#{$name} {
+    height: $size;
+  }
+}
+
+//Borders
+@each $name, $direction in variables.$directions {
+  .b-#{$name} {
+    border-#{$direction}: 1px solid #000;
+  }
+}

@@ -1,0 +1,11 @@
+<div class="pa-4 bg-col-lighterdark b-radius-20">
+    <div class="mb-5 flex flex-between flex-middle w-full ">
+        <div class="_post-social-icon">
+            <a [href]="profileLink">
+                <img [src]="'/assets/images/icons/' + data.platform + '.svg'"> </a>
+        </div>
+        <span class="fs-small col-white">{{ data.date }}</span>
+    </div>
+    <div class="w-full flex flex-center"
+         [innerHTML]="data.data"></div>
+</div>

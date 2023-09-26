@@ -12,19 +12,44 @@ body,
 html {
   @extend .w-full, .h-full, .ma-0;
   background-color: map-get(variables.$colors, dark);
+  overflow-x: hidden;
 }
 
 .b-radius-max {
   border-radius: 100%;
 }
 
+.b-radius-20 {
+  border-radius: 20px;
+}
+
 .outline {
-  outline-offset: 2px;
-  outline: solid 2px map-get(variables.$colors, red);
+  padding: 2px;
+  border: 2px solid map-get(variables.$colors, red);
 }
 
 .flex {
   display: flex;
+}
+
+.flex-middle {
+  align-items: center;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.block {
+  display: block;
 }
 
 .center {
@@ -33,4 +58,8 @@ html {
 
 .half-opacity {
   opacity: 0.5;
+}
+
+img {
+  max-width: 100%;
 }

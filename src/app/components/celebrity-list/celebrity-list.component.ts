@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CelebrityService } from 'src/app/services/celebrity.service';
-import { CelebrityStory } from 'src/global/interfaces';
+import { Celebrity, CelebrityStory } from 'src/global/interfaces';
 import Swiper from 'swiper';
 
 @Component({
@@ -27,5 +27,9 @@ export class CelebrityListComponent implements OnInit {
       spaceBetween: 20,
       slidesPerView: 4,
     });
+  }
+
+  setCurrentCelebrity(celebrity: CelebrityStory) {
+    this.celebrityService.currentCelebrity = celebrity.data;
   }
 }

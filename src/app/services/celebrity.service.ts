@@ -5,6 +5,16 @@ import { Celebrity } from 'src/global/interfaces';
   providedIn: 'root',
 })
 export class CelebrityService {
+  private _currentCelebrity = {} as Celebrity;
+
+  get currentCelebrity() {
+    return this._currentCelebrity;
+  }
+
+  set currentCelebrity(value: Celebrity) {
+    this._currentCelebrity = value;
+  }
+
   get celebrities(): Celebrity[] {
     return [
       {

@@ -1,10 +1,15 @@
-<div class="pa-4 bg-col-lighterdark b-radius-20">
+<div class="pa-4 pos-relative bg-col-lighterdark b-radius-20 _wrap">
+    <section class="w-full flex flex-center flex-middle bg-col-lighterdark b-radius-20 pos-absolute _sec-loading"
+             [ngClass]="{'visible': visibleLoader}">
+        <div class="pos-relative b-a b-col-red _one">
+        </div>
+    </section>
     <div class="mb-5 flex flex-between flex-middle w-full ">
         <div class="_post-social-icon">
             <a [href]="profileLink">
                 <img [src]="'/assets/images/icons/' + data.platform + '.svg'"> </a>
         </div>
-        <span class="fs-small col-white">{{ data.date }}</span>
+        <span class="fs-small col-white fw-100">{{ data.date }}</span>
     </div>
     <div class="w-full flex flex-center"
          [innerHTML]="data.data"></div>

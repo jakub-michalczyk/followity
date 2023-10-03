@@ -1,7 +1,7 @@
 @use "/src/global/variables.scss";
 
 @mixin generate($prefix, $property) {
-  $sizes: 0, 0.1, 0.25, 0.5, 1, 1.5, 3;
+  $sizes: 0, 0.1, 0.25, 0.5, 1, 1.5, 3, 6;
   $spacing: 1rem;
 
   @for $i from 1 through length($sizes) {

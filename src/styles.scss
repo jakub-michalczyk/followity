@@ -52,6 +52,10 @@ html {
   display: block;
 }
 
+.fw-100 {
+  font-weight: 100;
+}
+
 .center {
   text-align: center;
 }
@@ -62,4 +66,8 @@ html {
 
 img {
   max-width: 100%;
+}
+
+.b-a {
+  border: 1px solid #000;
 }

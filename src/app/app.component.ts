@@ -7,11 +7,4 @@ import { Celebrity } from 'src/global/interfaces';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
-  celebrities: Celebrity[] = [];
-  constructor(private celebrityService: CelebrityService) {}
-
-  ngOnInit() {
-    this.celebrities = this.celebrityService.celebrities;
-  }
-}
+export class AppComponent {}

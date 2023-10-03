@@ -1,6 +1,8 @@
 <div class="pa-4 flex w-full b-b b-col-lighterdark _celebrity-container swiper-container">
     <div class="swiper-wrapper">
         <div class="center swiper-slide"
+             (click)="setCurrentCelebrity(celebrity)"
+             routerLink="/celebrity"
              *ngFor="let celebrity of celebrities">
             <div class="outline center b-radius-max pos-relative _celebrity-wrap"
                  [ngClass]="{'half-opacity': celebrity.viewed}">

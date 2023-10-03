@@ -1,0 +1,61 @@
+@use "/src/global/variables.scss";
+
+._post-social-icon {
+  width: 32px;
+  height: 32px;
+}
+
+._wrap {
+  height: 550px;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+._sec-loading {
+  top: 48px;
+  left: 0;
+  height: calc(100% - 48px);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.visible {
+  opacity: 1 !important;
+}
+
+._sec-loading ._one {
+  height: 50px;
+  width: 50px;
+  border-width: 3px;
+  transform: rotate(45deg);
+  border-radius: 0 50% 50% 50%;
+  animation: move 0.5s linear infinite alternate-reverse;
+}
+._sec-loading ._one::before {
+  content: "";
+  position: absolute;
+  height: 55%;
+  width: 55%;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: map-get(variables.$colors, red);
+  border-bottom-color: map-get(variables.$colors, red);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes move {
+  to {
+    transform: translateY(15px) rotate(45deg);
+  }
+}

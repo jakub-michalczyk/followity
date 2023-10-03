@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CelebrityService } from './services/celebrity.service';
+import { Celebrity } from 'src/global/interfaces';
 
 @Component({
   selector: 'app-root',
